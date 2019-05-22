@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查询所有员工</title>
+</head>
+<body>
+    <table border="1" width="300px">
+        <tr>
+            <th>用户名ID</th>
+            <th>用户姓名</th>
+            <th>用户年龄</th>
+        </tr>
+
+        <tr th:each="user : ${list}" >
+            <td th:text="${user.id}"></td>>
+            <td th:text="${user.name}"></td>>
+            <td th:text="${user.age}"></td>>
+        </tr>
+    </table>
+</body>
+</html>
